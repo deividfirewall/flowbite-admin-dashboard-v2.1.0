@@ -1,0 +1,49 @@
+# Flowbite Pro - Application UI Dashboard
+
+# Flowbite Pro - CONFIGURAMOS CON DOCKER
+
+Instalamos la imagen de docker https://hub.docker.com/r/klakegg/hugo
+```bash
+docker pull klakegg/hugo
+```
+Construimos el codigo fuente
+```bash
+docker run --rm -it \
+  -v $(pwd):/src \
+  klakegg/hugo:0.101.0
+```
+
+Ejecutamos el servidor en cada reinicio
+```bash
+docker run --rm -it \
+  -v $(pwd):/src \
+  -p 1313:1313 \
+  klakegg/hugo:0.101.0 \
+  server
+```
+
+## Getting started
+
+Make sure that you have Node (>= 12.3.0) and NPM locally installed. 
+
+Also make sure that you have installed [HUGO](https://gohugo.io/getting-started/quick-start/).
+
+After you've unzipped the folder, go to the root of the project and run:
+
+```bash
+npm install
+```
+
+Then run `npm run start` to start the development server.
+
+## Building for production
+
+If you want to generate the production files you have to run `npm run build`.
+
+## Developer notes
+
+In the future we will develop a friendlier way to use the project files and the interface for your project by making HUGO optional. For now these are the source files that we worked with to build the application UI code. You'll be able to include these files directly from flowbite.com from a dashboard similar to what Tailwind UI offers, but also download the HTML, Tailwind CSS config and JavaScript source files, without the HUGO source files.
+
+If you face difficulties please contact us here:
+
+https://flowbite.com/contact/
