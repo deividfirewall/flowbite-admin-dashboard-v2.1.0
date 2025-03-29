@@ -1425,10 +1425,7 @@ const getPerformanceChartOptions = () => {
   };
 };
 
-if (
-  document.getElementById("performance-chart") &&
-  typeof ApexCharts !== "undefined"
-) {
+if ( document.getElementById("performance-chart") && typeof ApexCharts !== "undefined" ) {
   const chart = new ApexCharts(
     document.querySelector("#performance-chart"),
     getPerformanceChartOptions(),

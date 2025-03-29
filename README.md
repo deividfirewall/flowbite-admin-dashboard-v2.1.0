@@ -6,19 +6,14 @@ Instalamos la imagen de docker https://hub.docker.com/r/klakegg/hugo
 ```bash
 docker pull klakegg/hugo
 ```
-Construimos el codigo fuente
-```bash
-docker run --rm -it \
-  -v $(pwd):/src \
-  klakegg/hugo:0.101.0
-```
+
 
 Ejecutamos el servidor en cada reinicio
 ```bash
 docker run --rm -it \
   -v $(pwd):/src \
   -p 1313:1313 \
-  klakegg/hugo:0.101.0 \
+  klakegg/hugo \
   server
 ```
 
